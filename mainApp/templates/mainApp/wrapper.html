@@ -46,8 +46,12 @@ background-position: right center;
    }
 
 body {
-    background: #ffffff url(../../static/mainApp/background.png); no-repeat 50% 0;
-    background-color: #c7b39b; /* Цвет фона */
+    background: url(../../static/mainApp/background.png) no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+
    }
 
 
@@ -78,8 +82,8 @@ body {
   display: table;
   clear: both;
 }
-.left-item {float: left;}
-.right-item {float: right;}
+.left-item {float: left; padding-left:50px;}
+.right-item {float: right; padding-right:50px;}
 .navbar-logo {
   position: absolute;
   left: 50%;
@@ -173,44 +177,54 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
 }
 
 .features p {
+
   display: inline-block;
   vertical-align: top;
-  width: 30%;
-  margin: 0 5px;
+  width: 22%;
   text-align: center;
   font-family: 'Kanit', 900;
   font-weight:bold;
   background-repeat: no-repeat;
   background-position: center top;
-  padding-top: 150px;
-  padding-bottom:50px;
+  padding-top: 100px;
+  margin-top: 10px;
+  margin-bottom: 1px;
 }
 .feature {
+padding-left:50px;
+    margin-right:20px;
+    padding-bottom:10px;
   background-image: url("https://i.pinimg.com/originals/d2/9f/c1/d29fc14e3e508b26c3c121c133df174c.png");
-  background-size: 140px 140px;
+  background-size: 100px 100px;
 }
 
 .feature-t {
-    padding-bottom: 100px;
+    margin-right:20px;
+     margin-left:20px;
+  padding-bottom:10px;
     background-image: url("https://borodainvestora.ru/wp-content/uploads/2017/11/unnamed-e1510412909883.png");
-    background-size: 140px 140px;
+    background-size: 100px 100px;
 }
 
 .feature-s {
-    padding-bottom: 100px;
+     margin-left:20px;
+     padding-right:-50px;
+    padding-bottom: 10px;
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/1200px-Steam_icon_logo.svg.png");
-    background-size: 140px 140px;
+    background-size: 100px 100px;
 }
 
 .button:hover {background-color: #ff0000;}
 
 #background{
+
+
     top: 0px;
     left: 0px;
-    width: 50%;
+    width: 36%;
     height: 100%;
     background-color: rgba(0,0,0,0.8);
-    z-index: 1;
+
 }
 
  .img{
@@ -240,7 +254,7 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
 <body>
 <nav class="top-menu">
   <ul class="menu-main">
-    <li class="left-item img"><a href="">ОТЗЫВЫ</a></li>
+    <li class="left-item"><a href="">ОТЗЫВЫ</a></li>
     <li class="right-item"><a href="">ВОПРОСЫ</a></li>
 </ul>
   <a class="navbar-logo" href=""><img src="{% static 'mainApp/logo.jpg' %}" width="120px"></a>
@@ -248,10 +262,10 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
 <div class="container form-wrap bg-light" style="width:fit-content; max-width:50% "><h2 style="text-align:center; font-family: 'Kanit', 900;
   font-weight: bold;">Добро пожаловать на сайт! Здесь ты легко и безопасно, а главное быстро сможешь
 продать свои шмотки и скины из любимых игр CS:GO и DOTA2.</h2></div>
-<div class="features container" align="center" id="background">
-    <p style="background-color:#473C8B;" class="feature"><font color="white" size="5px">НАШ ВК</font></p>
-    <p style="background-color:#426E86;" class="feature-t"><font color="white" size="5px">НАШ ТГ</font></p>
-    <p style="background-color:#061283;" class="feature-s"><font color="white" size="5px">НАШ СТИМ</font></p>
+<div class="features container form-wrap" align="center" id="background">
+    <p  class="feature"></p>
+    <p  class="feature-t"></p>
+    <p  class="feature-s"></p>
 </div>
 
 </body>
